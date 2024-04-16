@@ -230,6 +230,14 @@ hr {
     width: 100px;
  }
 
+ .pelicula-aclamada
+ {
+  border: solid black 2px;
+  width: 15vw;
+  height: 40vh;
+  margin: 2vw 2vh;
+ }
+
  /*media query para impresion*/
  @media print {
   /*todo lo que ponga aca se ejecuta cuando voy a imprimir!!*/
