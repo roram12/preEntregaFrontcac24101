@@ -162,6 +162,77 @@ body
 /***************************/
 /***** FIN DEL HEADER ******/
 
+/**/
+/**/
+
+.tendencias
+{
+  color:var(--texto-blanco);
+  /*Animacion*/
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+
+.tendencias.visible
+{
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+.boton_anterior
+{
+  padding: 1.5vh 3vh;
+  border-radius: 10px;
+  border: 2px solid var(--texto-blanco);
+  background-color: var(--rojo);
+  color: var(--texto-blanco);
+  font-size: 1rem;
+  margin-right: 5px;
+}
+
+.boton_siguiente {
+  padding: 1.5vh 3vh;
+  border-radius: 10px;
+  border: 2px solid var(--texto-blanco);
+  background-color: var(--rojo);
+  color: var(--texto-blanco);
+  font-size: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.centrar
+{
+  display:flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card
+{
+  background-color: var(--fondo-negro);
+  border-color: var(--fondo-negro);
+  margin-bottom: 20px;
+  align-content: center;
+  transition: all 2s ease-in-out 250ms;
+}
+.card:hover
+{
+  filter:blur(1rem);
+ }
+
+.card img {
+  background-color: var(--fondo-negro);
+  border-color: var(--fondo-negro);
+  object-fit: cover;
+  height: 350px;
+  width: 200px;
+  align-content: center;
+}
+
 /************************/
 /* ELEMENTOS DE BUSQUEDA*/
 
