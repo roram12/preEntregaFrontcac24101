@@ -8,6 +8,14 @@
     font-style: normal;   
     margin: 0;
 }
+body
+{
+  background-color: #181419 !important; 
+}
+
+/******************/
+/****** Font ******/
+
 .ubuntu-light {
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
@@ -55,20 +63,21 @@
   font-weight: 700;
   font-style: italic;
 }
+/**********************/
+/****** FIN Font ******/
 
-/*especifidad
-    inline > id > clase > tipo
-    !important 
-*/
+
+
 .texto-blanco {
     color: var(--texto-blanco);
 }
 
+/*******************/
+/*****  MAIN  ******/
+
 .main {
     background-image: linear-gradient(to right top, #0000008a, #0000008a), url(../imgs/banner-bg.jpg);
-    /*background-attachment: fixed; *//* tph*/
-    height: 90vh; /*vh altura relativa*/
-    width: 100vw; /*vw ancho relativo*/
+    height: 90vh;
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -78,108 +87,100 @@
     flex-direction: column;
     align-items: center;
 }
-.main_titulo {
-    padding-top: 20vh;
-    padding-bottom: 5vh;
-    font-size: 3rem; /*rem|em unidad de medida relativa ¿a qué?*/
-}
-.main_subtitulo {
-    margin-bottom: 5vh;
-}
-.main_btn_registrarse {
-    text-decoration: none;
-    padding: 15px; /*espacio desde el borde hacia dentro*/
-    background-color: var(--rojo);
-    color: var(--texto-blanco);
-    border-radius: 5px;    
-    width: 20vw;
-}
 
-.header {
-    background-color:var(--rojo) ;
-    padding-top: 1vh;
-    padding-left: 3vw;
-    height: 9vh;
-    min-height: 50px;
-    /*agrego flexbox*/
-    display: flex;
-    justify-content: center; /*main axis*/
-    align-items: center;
+/***********************/
+/***** FIN  MAIN  ******/
+
+/****************************/
+/***** CONJUNTO HEADER ******/
+
+.main_titulo
+{
+  padding-top: 20vh;
+  padding-bottom: 5vh;
+  font-size: 3rem;
 }
-.header_logo {
-    height: 5vh;
-    /*display: inline-block;*/
-    width: 20vw;
+.main_subtitulo
+{
+  margin-bottom: 5vh;
+}
+.main_btn_registrarse
+{
+  text-decoration: none;
+  padding: 15px;
+  background-color: var(--rojo);
+  color: var(--texto-blanco);
+  border-radius: 5px;    
+  width: 20vw;
+}
+.header
+{
+  background-color:var(--rojo) ;
+  padding-top: 1vh;
+  padding-left: 3vw;
+  height: 9vh;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header_logo
+{
+  height: 5vh;
+  width: 20vw;
 } 
-.header_logo_link {
+.header_logo_link
+{
+  text-decoration: none;
+  color: var(--texto-blanco);
+}
+.header_menu
+{
+  height: 10vh;
+  display: flex;
+  width: 78vw;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 5vw;
+} 
+.header_menu a
+{
+  padding-left: 1vw;
+  padding-right: 1vw;
   text-decoration: none;
   color: var(--texto-blanco);
 }
 
-.header_menu {
-    height: 10vh;/*relativo > */
-    /*display: inline-block;*/
-    display: flex;
-    width: 78vw;
-    /*padding-top: 2vh ;*/
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 5vw;
-} 
-.header_menu a {
-    padding-left: 1vw;
-    padding-right: 1vw;
-    text-decoration: none;
-    color: var(--texto-blanco);
-}
-
-#header_menu_login {
+#header_menu_login
+{
   padding: 1vh;
   background: black;
   border-radius: 5px;
   font-size: 1rem;
 }
 
+/***************************/
+/***** FIN DEL HEADER ******/
+
+/************************/
+/* ELEMENTOS DE BUSQUEDA*/
+
 /*formulario de busqueda*/
 .busqueda {
-  /*margin: 0 auto; despues los usamos para centrar otra cosa*/
   text-align: center;
   height: 50vh;
-  background-color: var(--fondo-negro);
   color:var(--texto-blanco);
   padding-top: 10vh;
   font-size: 1.5rem;
-  /*border: 1px solid red;*/
 
   display: flex;
   flex-direction: column;
 }
 
-/*SELECTORES AVANZADOS*/
-/*1 - hijos directos: >*/
-/*2 - hermano adyacente: + */
-/*3 - descendiente */
 .busqueda > h2 + form {
   padding-top: 6vh;
 }
 
-/*
-.busqueda form {
-  padding-top: 5vh;
-}
-
-#busqueda_form {
-  padding-top: 5vh;
-}
-
-form {
-  padding-top: 5vh;
-}
-*/
-
-/*.busqueda form input{
-  padding: 1vh;
-}*/
 .input_seach {
   padding: 2vh 3vh;
   border-radius: 25px;
@@ -187,7 +188,6 @@ form {
 
   text-transform: capitalize;
   width: 50vw;
-  /*tph: sacar borde cuando hago foco en el input*/
 }
 
 .button_search {
@@ -205,7 +205,7 @@ form {
 }
 
 hr {
-  margin: 0 auto; /*despues lo usamos para centrar otra cosa*/
+  margin: 0 auto;
   margin-top: 20vh ;
   width: 75vw;
   border: 0.5px solid var(--rojo);
@@ -222,8 +222,8 @@ hr {
   height: 20vh;
   background-color: aqua;
   display: flex;
-  flex-direction: row;/*row|row-reverse|column|column-reverse*/
-  justify-content:space-around; /*main axis*/
+  flex-direction: row;
+  justify-content:space-around;
   flex-wrap: wrap;
  }
  .flex-container div {
@@ -252,9 +252,6 @@ hr {
 
  /*media query*/
  @media screen and (min-width: 800px) and (max-width: 900px) {
- /*@media (max-width:400px) and (min-width:900px) */
-  /*@import url(styles-800-900.css);*/
-  /*TPH: carga de css en media*/
   :root {
     --rojo: #9f8336; 
   }
