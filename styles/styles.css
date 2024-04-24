@@ -13,6 +13,28 @@ body
   background-color: #181419 !important; 
 }
 
+/**/
+/**/
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--rojo); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #912e3f; 
+}
+
 /******************/
 /****** Font ******/
 
@@ -162,8 +184,8 @@ body
 /***************************/
 /***** FIN DEL HEADER ******/
 
-/**/
-/**/
+/******************************/
+/***** SECCION TENDENCIAS *****/
 
 .tendencias
 {
@@ -233,6 +255,9 @@ body
   align-content: center;
 }
 
+/**********************************/
+/***** FIN SECCION TENDENCIAS *****/
+
 /************************/
 /* ELEMENTOS DE BUSQUEDA*/
 
@@ -289,25 +314,61 @@ hr {
   color:var(--rojo);
  }
 
- .flex-container {
-  height: 20vh;
-  background-color: aqua;
-  display: flex;
-  flex-direction: row;
-  justify-content:space-around;
-  flex-wrap: wrap;
- }
- .flex-container div {
-    width: 100px;
- }
+/****************************/
+/* FIN ELEMENTOS DE BUSQUEDA*/
 
- .pelicula-aclamada
- {
+/************/
+/* ACLAMADAS*/
+
+.pelicula-aclamada
+{
   border: solid black 2px;
   width: 15vw;
   height: 40vh;
   margin: 2vw 2vh;
- }
+}
+
+.texto-aclamada
+{
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+/************************/
+/**** FIN ACLAMADAS *****/
+
+/**********/
+/* FOOTER */
+
+.preguntas
+{
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+/* unvisited link */
+.preguntas:link
+{
+  color: red;
+}
+
+/* visited link */
+.preguntas:visited
+{
+  color: white;
+}
+
+/* mouse over link */
+.preguntas:hover
+{
+  color: hotpink;
+}
+
+/* selected link */
+.preguntas:active
+{
+  color: blue;
+}
 
  /*media query para impresion*/
  @media print {
