@@ -146,6 +146,7 @@ body
   justify-content: center;
   align-items: center;
 }
+/*
 .header_logo
 {
   height: 5vh;
@@ -155,7 +156,7 @@ body
 {
   text-decoration: none;
   color: var(--texto-blanco);
-}
+}*/
 .header_menu
 {
   height: 10vh;
