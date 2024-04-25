@@ -188,26 +188,14 @@ body
 /******************************/
 /***** SECCION TENDENCIAS *****/
 
-.tendencias
-{
+.tendencias {
+  background-color: var(--fondo-negro);
   color:var(--texto-blanco);
-  /*Animacion*/
-  opacity: 0;
-  transform: translateY(20vh);
-  visibility: hidden;
-  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
-  will-change: opacity, visibility;
+
 }
 
-.tendencias.visible
-{
-  opacity: 1;
-  transform: none;
-  visibility: visible;
-}
 
-.boton_anterior
-{
+.boton_anterior {
   padding: 1.5vh 3vh;
   border-radius: 10px;
   border: 2px solid var(--texto-blanco);
@@ -227,24 +215,25 @@ body
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.centrar
-{
+.centrar {
   display:flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 20px;
 }
 
-.card
-{
+.card {
   background-color: var(--fondo-negro);
   border-color: var(--fondo-negro);
   margin-bottom: 20px;
   align-content: center;
-  transition: all 2s ease-in-out 250ms;
 }
-.card:hover
-{
-  filter:blur(1rem);
+
+.card:hover .text{  opacity: 1;
+ transition: .5s ease;
+}
+
+.card:hover .image{ 
+  filter:blur(1rem)
  }
 
 .card img {
@@ -253,9 +242,27 @@ body
   object-fit: cover;
   height: 350px;
   width: 200px;
-  align-content: center;
 }
 
+.image {  
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.text { 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  opacity: 0;
+}
 /**********************************/
 /***** FIN SECCION TENDENCIAS *****/
 
@@ -373,14 +380,12 @@ hr {
 
  /*media query para impresion*/
  @media print {
-  /*todo lo que ponga aca se ejecuta cuando voy a imprimir!!*/
   :root {
     --rojo: #3f9f36; 
   }
   .main {
     display: none;
   }
-  /*jueguen!!*/
  }
 
  /*media query*/
