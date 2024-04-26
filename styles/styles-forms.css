@@ -1,0 +1,143 @@
+
+/* Generales*/
+
+/*@import url(./sitio-b.css);*/
+/*@import url(./styles.css);*/
+
+/*Formulario*/
+
+body {
+  background-image: url("../imgs/bg-register.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form_title {
+  font-size: 35px;
+  margin-bottom: 35px;
+  color: var(--texto-blanco);
+  text-align: center;
+}
+
+.form_Registrarse {
+  background-color: #333333;
+  padding:30px 40px;
+  width: 100%;
+  margin: auto;
+  width: 380px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.form_Inicio_de_Sesión{
+  background-color: #333333;
+  padding:30px 40px;
+  height: 90vh;
+  margin: 0 auto;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input:not(.check,.boton),select{
+    border: 2px solid var(--rojo);
+    background-color: #333333;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 35px;
+    padding: 0px 20px;
+    font-size: 2rem;
+    border-radius: 20px;
+    outline: none;
+    color:rgb(255, 255, 255);
+}
+
+.form_input {
+  border: 2px solid var(--rojo);
+  background-color: #333333;
+  width: 100%;
+  margin-bottom: 20px;
+  height: 35px;
+  padding: 0px 30px;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  outline: none;
+  color:rgb(255, 255, 255);
+}
+
+.form_submit{
+  width: 88%;
+  box-sizing: content-box;
+  background-color:var(--rojo);
+  border: 2px solid var(--rojo);
+  color: rgb(255, 255, 255);
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form_submit:hover {
+  background-color:#333333;
+  border: 2px solid var(--rojo);
+}
+
+.form_label{
+  color: rgb(255, 255, 255);
+  font-size: 10px;
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+
+.header {
+  background-color:transparent ;
+  padding-top: 1vh;
+  padding-left: 3vw;
+  height: 9vh;
+  min-height: 50px;
+  /*agrego flexbox*/
+  display: flex;
+  justify-content: center; /*main axis*/
+  align-items: center;
+  background-color: none;
+}
+
+.header_logo {
+  height: 5vh;
+  /*display: inline-block;*/
+  width: 20vw; 
+} 
+
+.header_logo_link {
+  text-decoration: none;
+  color: var(--texto-blanco);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.header_menu {
+  height: 10vh;/*relativo > */
+  /*display: inline-block;*/
+  display: flex;
+  width: 78vw;
+  /*padding-top: 2vh ;*/
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 5vw;
+  color:#ffffff;
+}
+
+.ayuda_registrarse {
+  color: gray; 
+  margin-top:40px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight:400;
+}
+
+@media (max-width: 1200px) {
+  .form_title {
+    font-size: 1.8rem;
+  }
+}
+  

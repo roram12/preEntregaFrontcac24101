@@ -7,10 +7,15 @@
     font-weight: 400;
     font-style: normal;   
     margin: 0;
+    
 }
 body
 {
-  background-color: #181419 !important; 
+  background-color: #181419 !important;
+  /*DESCOMETAR EN ENTREGA*/
+  /*--rojo: #9f3647;*/
+  --texto-blanco: #ffffff;
+  --fondo-negro: #000000;
 }
 
 /**/
@@ -88,18 +93,32 @@ body
 /**********************/
 /****** FIN Font ******/
 
-
-
-.texto-blanco {
-    color: var(--texto-blanco);
+/**********/
+/* NAVBAR */
+.navbar
+{
+  background-color: var(--rojo);
 }
+.texto-blanco
+{
+  color: var(--texto-blanco);
+  transition: 0.3s;
+}
+li .texto-blanco:hover
+{
+  background-color:black;
+  transition: 0.3s;
+}
+
+/************/
+/*FIN NAVBAR*/
 
 /*******************/
 /*****  MAIN  ******/
 
 .main {
     background-image: linear-gradient(to right top, #0000008a, #0000008a), url(../imgs/banner-bg.jpg);
-    height: 90vh;
+    height: 100vh;
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -146,17 +165,6 @@ body
   justify-content: center;
   align-items: center;
 }
-/*
-.header_logo
-{
-  height: 5vh;
-  width: 20vw;
-} 
-.header_logo_link
-{
-  text-decoration: none;
-  color: var(--texto-blanco);
-}*/
 .header_menu
 {
   height: 10vh;
@@ -189,12 +197,8 @@ body
 /***** SECCION TENDENCIAS *****/
 
 .tendencias {
-  background-color: var(--fondo-negro);
   color:var(--texto-blanco);
-
 }
-
-
 .boton_anterior {
   padding: 1.5vh 3vh;
   border-radius: 10px;
@@ -272,29 +276,28 @@ body
 /*formulario de busqueda*/
 .busqueda {
   text-align: center;
-  height: 50vh;
   color:var(--texto-blanco);
-  padding-top: 10vh;
-  font-size: 1.5rem;
-
-  display: flex;
-  flex-direction: column;
+  font-size: 1.2rem;
 }
 
-.busqueda > h2 + form {
-  padding-top: 6vh;
+.busqueda h2
+{
+  font-size: 2.3rem;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
 }
 
-.input_seach {
+.input_seach
+{
   padding: 2vh 3vh;
   border-radius: 25px;
   border: none;
-
   text-transform: capitalize;
-  width: 50vw;
+  width: 45vw;
 }
 
-.button_search {
+.button_search
+{
   padding: 1.5vh 3vh;
   border-radius: 25px;
   border: 2px solid var(--texto-blanco);
@@ -304,22 +307,18 @@ body
   font-size: 1rem;
 }
 
-.button_search:hover {
-  font-size: 1.1rem;
-}
-
-hr {
-  margin: 0 auto;
-  margin-top: 20vh ;
-  width: 75vw;
-  border: 0.5px solid var(--rojo);
- }
-
- .elemento_fijo {
+.elemento_fijo
+{
   position: fixed;
   bottom:5vh;
   right:5vw;
   color:var(--rojo);
+ }
+
+ .linea-busqueda
+ {
+  height: 2px;
+  margin-bottom: 15vh;
  }
 
 /****************************/
@@ -357,7 +356,7 @@ hr {
 /* unvisited link */
 .preguntas:link
 {
-  color: red;
+  color: var(--texto-blanco);
 }
 
 /* visited link */
@@ -378,6 +377,10 @@ hr {
   color: blue;
 }
 
+/************/
+/*FIN FOOTER*/
+
+
  /*media query para impresion*/
  @media print {
   :root {
@@ -389,21 +392,33 @@ hr {
  }
 
  /*media query*/
- @media screen and (min-width: 800px) and (max-width: 900px) {
+ @media screen and (min-width: 0px) and (max-width: 576px) {
   :root {
-    --rojo: #9f8336; 
-  }
-  .header {
-    justify-content: flex-start;
-  }
-  .header_menu {
-    display: none;
+    --rojo: red; 
   }
 
  }
 
- @media screen and (min-width: 900px) and (max-width: 1200px) {
+@media screen and (min-width: 576px) and (max-width: 768px) {
+:root {
+  --rojo: green; 
+}
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
   :root {
-    --rojo: #369f9f; 
+    --rojo: yellow; 
   }
- }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  :root {
+    --rojo: orange; 
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  :root {
+    --rojo: purple; 
+  }
+}

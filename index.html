@@ -22,55 +22,61 @@
     </head>
 
     <body>
-        <nav class="fixed-top navbar bg-danger navbar-expand-lg">
+        <nav class="fixed-top navbar py-3 navbar-expand-lg">
             <div class="container d-flex justify-content-between">
-                <a class="navbar-brand col-9" href="#">
-                    <i class="bi bi-film"></i>
-                    CAC-MOVIES
+                <a class="navbar-brand" href="#">
+                    <i class="bi bi-film texto-blanco">
+                        CAC-MOVIES
+                    </i>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav col-4">
-                    <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Tendencias</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Registrarse</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Iniciar Sesión</a>
-                    </li>
-                </ul>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ">
+                            <a class="texto-blanco link-underline link-underline-opacity-0 p-2 m-3 rounded" aria-current="page" href="#">Tendencias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="texto-blanco link-underline link-underline-opacity-0 p-2 m-3 rounded" href="./html/Registrarse.html">Registrarse</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="texto-blanco link-underline link-underline-opacity-0 p-2 m-3 rounded" href="./html/Iniciar-Sesión.html">Iniciar Sesión</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
 
         <main>
             <section class="main">
-                <h1 class="main_titulo texto-blanco ubuntu-bold">
+                <h1 class="main_titulo texto-blanco ubuntu-bold fs-1">
                     Películas y series ilimitadas <br>en un solo lugar
                 </h1>
-                <h2 class="main_subtitulo texto-blanco ubuntu-medium">
+                <h2 class="main_subtitulo texto-blanco ubuntu-medium fs-2">
                     Disfruta donde quieras.<br> Cancela en cualquier momento.
                 </h2>
                 <a class="texto-blanco main_btn_registrarse" href="./html/registrarse.html">
                     Registrarse
                 </a>
             </section>
-            <section class="busqueda">                
-                <h2>¿Qué estas buscando para ver?</h2>
-                <form class="busqueda_form" id="busqueda_form">
-                    <input type="search" 
-                        placeholder="buscar..." 
-                        class="input_seach"
-                    >
-                    <button class="button_search">
-                        Buscar
-                    </button>
-                </form>
-                <hr>
+
+            <section class="container">
+                <div class="busqueda row justify-content-center">
+                    <h2 class="text-center">¿Qué estas buscando para ver?</h2>
+                    <div class="mb-5">
+                        <form class=" busqueda_form" id="busqueda_form">
+                            <input type="search" 
+                                placeholder="buscar..." 
+                                class="input_seach"
+                            >
+                            <button class="button_search">
+                                Buscar
+                            </button>
+                        </form>
+                    </div>
+                    <hr class="col-12 linea-busqueda border border-danger border-3 opacity-50 mt-5"/>
+                </div>
             </section>
 
             <!-- Mariana, Tapia | Las tendencias de hoy --> 
@@ -307,7 +313,7 @@
         </main>
 
         <footer> 
-            <nav class="navbar bg-danger">
+            <nav class="navbar">
                 <div class="container justify-content-center">
                     <span class="navbar-text">
                         <a class="preguntas link-underline-opacity-0" href="#">
