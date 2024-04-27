@@ -9,7 +9,6 @@ body
 }
 
 /**/
-/**/
 /* width */
 ::-webkit-scrollbar {
   width: 15px;
@@ -93,6 +92,7 @@ body
 {
   color: var(--texto-blanco);
   transition: 0.3s;
+  font-style: normal;
 }
 li .texto-blanco:hover
 {
